@@ -24,12 +24,12 @@ stages:
 
     steps:
     
-    - task: TerraformInstaller@0
-      displayName: install Terraform v0.12.28
+    - task: TerraformInstaller@1
+      displayName: install Terraform v1.12.2
       inputs:
-        terraformVersion: '0.12.28'
+        terraformVersion: '1.12.2'
     
-    - task: TerraformTaskV1@0
+    - task: TerraformTask@5
       displayName: terraform init with Azure backend
       inputs:
         provider: 'azurerm'
@@ -41,7 +41,7 @@ stages:
         backendAzureRmContainerName: ${{ parameters.backendAzureRmContainerName }}
         backendAzureRmKey: ${{ parameters.backendAzureRmKey }}
     
-    - task: TerraformTaskV1@0
+    - task: TerraformTask@5
       displayName: terraform plan -var environment=${{ parameters.environment }} -out=${{ parameters.backendAzureRmKey }}
       inputs:
         provider: 'azurerm'
@@ -69,7 +69,7 @@ stages:
             Write-Host "There is no change detected in Terraform tfplan file"
           }
     
-    - task: TerraformTaskV1@0
+    - task: TerraformTask@5
       displayName: terraform apply ${{ parameters.backendAzureRmKey }}
       condition: eq(variables.anyTfChanges, true)
       inputs:
