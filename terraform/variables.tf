@@ -9,5 +9,8 @@ variable "resource-group-name" {
 }
 
 locals {
-  config  = yamldecode(file("../azure-pipelines.yml"))["location"]
+  config  = yamldecode(file("../azure-pipelines.yml"))
 }
+  output "location" {
+      value = local.config.location
+    }
