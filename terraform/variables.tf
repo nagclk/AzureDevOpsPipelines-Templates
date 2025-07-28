@@ -9,6 +9,6 @@ variable "resource-group-name" {
 }
 
 variable "location" {
-  default = "loc"
+  default = "westeurope"
   description = "The location to host the Azure resource"
 }
