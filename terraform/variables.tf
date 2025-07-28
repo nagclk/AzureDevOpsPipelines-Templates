@@ -7,3 +7,7 @@ variable "resource-group-name" {
   default = "resourcegroup"
   description = "The Resource Group name to be deployed"
 }
+
+locals {
+  config  = yamldecode(file("../azure-pipelines.yml"))
+}
