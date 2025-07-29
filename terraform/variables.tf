@@ -17,6 +17,3 @@ locals {
   location = local.config.variables["location"]
 }
 
-output "region" {
-value = local.location
-}
