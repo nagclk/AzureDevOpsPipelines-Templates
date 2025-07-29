@@ -1,5 +1,5 @@
-trigger:
-- master
+trigger: none
+#- master
 
 variables:
   backendServiceArm: 'Nag-Azure-Connect'
