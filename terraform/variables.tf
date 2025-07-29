@@ -14,5 +14,5 @@ locals {
 }
 
   output "location" {
-      value = local.config.variables.location
+      value = local.config.variables["location"]
     }
