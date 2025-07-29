@@ -7,7 +7,8 @@ provider "azurerm" {
 resource "azurerm_resource_group" "rg" {
   name     = "${var.resource-group-name}-${var.environment}"
   #location = "${local.config.variables["location"]}"  //this works
-  location = local.location
+  #location = local.location
+   location = region.value
   
   tags = {
     environment = var.environment
