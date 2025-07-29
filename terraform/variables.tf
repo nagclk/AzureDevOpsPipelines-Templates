@@ -14,5 +14,5 @@ locals {
 }
 
   variable "location" {
-      default = local.config.variables["location"]
+      default = "westeurope"
     }
