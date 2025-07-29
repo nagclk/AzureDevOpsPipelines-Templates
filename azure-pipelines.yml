@@ -6,7 +6,7 @@ variables:
   backendAzureRmResourceGroupName: 'devops-tfstate-RG'
   backendAzureRmStorageAccountName: 'nagtfstate'
   backendAzureRmContainerName: 'tfstate'
-  location: 'centralindia'
+  location: 'southindia'
   tfBackendEnvironment: tf_backend
   devEnvironment: dev
   testEnvironment: test
