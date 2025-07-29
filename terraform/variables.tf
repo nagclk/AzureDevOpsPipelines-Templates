@@ -14,10 +14,13 @@ variable "resource-group-name" {
 
 locals {
   config  = yamldecode(file("../azure-pipelines.yml"))
-  location = "centralindia"
+  #location = "centralindia"
 }
 
-output "location" {
+/*output "location" {
 value = local.config.variables["location"]
+}*/
+locals {
+location = local.config.variables["location"]
 }
 
