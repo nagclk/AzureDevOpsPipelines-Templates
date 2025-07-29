@@ -17,6 +17,6 @@ locals {
   location = local.config.variables["location"]
 }
 
-/*output "location" {
-value = local.config.variables["location"]
-}*/
+output "region" {
+value = local.location
+}
