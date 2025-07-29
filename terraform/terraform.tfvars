@@ -1,2 +1,2 @@
 #location = local.config.variables["location"]
-location = "centralindia"
+#location = "centralindia"
