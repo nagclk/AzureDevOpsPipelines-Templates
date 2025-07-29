@@ -13,6 +13,6 @@ locals {
   config  = yamldecode(file("../azure-pipelines.yml"))
 }
 
-  output "location" {
-      value = local.config.variables["location"]
+  variable "location" {
+      default = local.config.variables["location"]
     }
