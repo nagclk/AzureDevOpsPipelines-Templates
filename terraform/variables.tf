@@ -8,12 +8,16 @@ variable "resource-group-name" {
   description = "The Resource Group name to be deployed"
 }
 
- /* variable "location" {
+ variable "location" {
       default = "westeurope"
-    } */
+    }
 
 locals {
   config  = yamldecode(file("../azure-pipelines.yml"))
   location = local.config.variables["location"]
 }
 
+var "region" {
+type = string
+value = local.location
+}
