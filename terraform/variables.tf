@@ -17,7 +17,7 @@ locals {
   location = local.config.variables["location"]
 }
 
-var "region" {
+variable "region" {
 type = string
 value = local.location
 }
