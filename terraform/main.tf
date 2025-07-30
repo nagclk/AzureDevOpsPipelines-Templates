@@ -4,15 +4,13 @@ provider "azurerm" {
   features {}
 }
 
-output "region" {
-value = local.location
-}
+
 
 resource "azurerm_resource_group" "rg" {
   name     = "${var.resource-group-name}-${var.environment}"
   #location = local.config.variables["location"]  //this works
   #location = local.location //this works
-  location = region
+  location = var.region
   
   tags = {
     environment = var.environment
