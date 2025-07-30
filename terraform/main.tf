@@ -4,9 +4,9 @@ provider "azurerm" {
   features {}
 }
 
-/*output "region" {
+output "region" {
 value = local.location
-}*/
+}
 
 resource "azurerm_resource_group" "rg" {
   name     = "${var.resource-group-name}-${var.environment}"
