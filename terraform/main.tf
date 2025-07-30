@@ -4,7 +4,7 @@ provider "azurerm" {
   features {}
 }
 
-output "region" {
+output "region1" {
 value = local.location
 }
 
