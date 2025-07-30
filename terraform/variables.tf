@@ -16,8 +16,3 @@ locals {
   config  = yamldecode(file("../azure-pipelines.yml"))
   location = local.config.variables["location"]
 }
-
-variable "region" {
-type = string
-value = local.location
-}
